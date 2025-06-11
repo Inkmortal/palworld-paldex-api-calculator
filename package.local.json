@@ -1,0 +1,24 @@
+{
+  "name": "palworld-paldex-api-calculator-extended",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bun run dev:full",
+    "dev:full": "concurrently \"bun run dev:api\" \"bun run dev:frontend\"",
+    "dev:api": "bun run server.ts",
+    "dev:frontend": "cd frontend && bun run dev",
+    "dev:original": "bun --watch run ./src/index.ts",
+    "build": "bun run build:frontend",
+    "build:frontend": "cd frontend && bun run build",
+    "install:all": "bun install && cd frontend && bun install",
+    "start": "bun run server.ts"
+  },
+  "devDependencies": {
+    "@elysiajs/cors": "^0.8.0",
+    "concurrently": "^8.2.2"
+  },
+  "description": "Extended Palworld API with breeding calculator frontend",
+  "notes": {
+    "purpose": "This file contains custom scripts and dependencies for the extended functionality",
+    "usage": "Run 'bun install -c package.local.json' to install additional dependencies"
+  }
+}
